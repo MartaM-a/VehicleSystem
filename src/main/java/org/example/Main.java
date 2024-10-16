@@ -24,9 +24,9 @@ public class Main {
             personalCar.driving();
 
         }
-//        else {
-//            System.out.println("Please correct a valid type of vehicle");
-//        }
+        else {
+            System.out.println("Please write a valid type of vehicle");
+        }
 
 
 
