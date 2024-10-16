@@ -12,9 +12,9 @@ public class Main {
 
 
         Scanner scanner = new Scanner(System.in);
-        for (int i = 1; i <= 5; i++);
+
         System.out.println("Specify the type of car: PersonalCar or Bus");
-        for (int i = 1; i <= 5; i++);
+
         String vehicleType = scanner.nextLine();
 
         if (vehicleType.equals("Bus")) {
