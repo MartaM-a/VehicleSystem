@@ -19,14 +19,14 @@ public class Main {
             Bus bus = new Bus();
             bus.driving();
         }
-        if (vehicleType.equals("PersonalCar")){
+         if (vehicleType.equals("PersonalCar")){
             PersonalCar personalCar = new PersonalCar();
             personalCar.driving();
 
         }
-        else {
-            System.out.println("Please wright a valid type of vehicle");
-        }
+//        else {
+//            System.out.println("Please correct a valid type of vehicle");
+//        }
 
 
 
