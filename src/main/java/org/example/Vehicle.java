@@ -2,7 +2,10 @@ package org.example;
 
 public interface Vehicle {
 
-     void driving ();
 
+     void driving ();
+     double convertToMph();
+     double convertToKmph();
+     void readSpeed(double speed);
 
 }

@@ -10,26 +10,41 @@ public class Main {
 
 
         Scanner scanner = new Scanner(System.in);
+        Vehicle vehicle = null;
+
 
         System.out.println("Specify the type of car: PersonalCar or Bus");
+            //for (int i = 1; i <= 2; i++) {
+                String vehicleType = scanner.nextLine();
 
-        String vehicleType = scanner.nextLine();
 
-        if (vehicleType.equals("Bus")) {
-            Bus bus = new Bus();
-            bus.driving();
+                if (vehicleType.equals("Bus")) {
+                    vehicle = new Bus();
+                    vehicle.driving();
+                } else if (vehicleType.equals("PersonalCar")) {
+                    vehicle = new PersonalCar();
+                    vehicle.driving();
+                } else {
+                    System.out.println("Please write a valid type of vehicle");
+                }
+
+
+
+            if (vehicle != null) {
+                System.out.print("Enter the speed in km/h :");
+
+                double speed = scanner.nextDouble();
+
+                vehicle.readSpeed(speed);
+
+
+
+
+                System.out.println("Speed in km: " + vehicle.convertToKmph());
+                System.out.println("Speed in miles: " + vehicle.convertToMph());
+
+
+            }
         }
-         if (vehicleType.equals("PersonalCar")){
-            PersonalCar personalCar = new PersonalCar();
-            personalCar.driving();
-
-        }
-        else {
-            System.out.println("Please write a valid type of vehicle");
-        }
-
-
-
 
     }
-}
