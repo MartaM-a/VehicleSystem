@@ -33,19 +33,42 @@ public class Main {
 
             vehicle.driving();
 
-
+            while (true) {
 
                 System.out.print("Enter the speed in km/h :");
 
-                double speed = scanner.nextDouble();
+                try {
 
-                vehicle.readSpeed(speed);
+                    double speed = scanner.nextDouble();
+
+                    scanner.nextLine();
+
+                    vehicle.readSpeed(speed);
+                    break;
+
+                } catch (IllegalArgumentException e) {
+                    System.out.println(e.getMessage());
+                }
+
+            }
+            System.out.println("Increase speed? Yes or No");
+            String yesOrNo = scanner.nextLine();
+            if (yesOrNo.equals("Yes")) {
+                vehicle.speedUp();
+            }
+
+            System.out.println("Speed in km: " + vehicle.convertToKmph());
+            System.out.println("Speed in miles: " + vehicle.convertToMph());
 
 
-                System.out.println("Speed in km: " + vehicle.convertToKmph());
-                System.out.println("Speed in miles: " + vehicle.convertToMph());
+            System.out.println("Decrease speed? Yes or No");
+             yesOrNo = scanner.nextLine();
+            if(yesOrNo.equals("Yes")) {
+                vehicle.slowDown();
+            }
 
-
+            System.out.println("Speed in km: " + vehicle.convertToKmph());
+            System.out.println("Speed in miles: " + vehicle.convertToMph());
             }
         }
 

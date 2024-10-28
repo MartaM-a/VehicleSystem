@@ -7,5 +7,6 @@ public interface Vehicle {
      double convertToMph();
      double convertToKmph();
      void readSpeed(double speed);
-
+     double slowDown();
+     double speedUp();
 }
