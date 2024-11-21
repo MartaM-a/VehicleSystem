@@ -13,7 +13,7 @@ public class Main {
 
 
         System.out.println("Specify the type of car: PersonalCar or Bus");
-        for (int i = 1; i <= 5; i++) {
+        for (int i = 1; i <= 4; i++) {
 
             Vehicle vehicle;
 
@@ -69,7 +69,10 @@ public class Main {
 
             System.out.println("Speed in km: " + vehicle.convertToKmph());
             System.out.println("Speed in miles: " + vehicle.convertToMph());
+            Car.CARS.add((Car) vehicle);
+
             }
+        Car.print();
         }
 
     }

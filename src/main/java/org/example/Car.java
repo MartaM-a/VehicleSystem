@@ -1,8 +1,21 @@
 package org.example;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
 public abstract class Car implements Vehicle {
 
     protected double speed;
+
+    public static final List<Car> CARS = new ArrayList<>();
+    public static void print(){
+
+        for (int i = 0; i < CARS.size(); i++){
+            Vehicle car = CARS.get(i);
+            System.out.println(i + 1+ ". " + car.getClass().getSimpleName() + " - Speed: " + car.convertToMph() + " mph" +car.convertToKmph() +" km");
+        }
+    }
 
     @Override
     public void driving() {
@@ -56,7 +69,11 @@ public abstract class Car implements Vehicle {
         if (s >= 200) throw new IllegalArgumentException("Speed is to high");
         speed = s;
         return speed;
-    }
+
+
+
+
+        }
 
 
 
